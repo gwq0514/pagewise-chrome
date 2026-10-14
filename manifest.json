@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "题见 PageWise",
+  "version": "0.1.1",
+  "description": "让网页题目，一眼有解。读取页面文字或识别当前屏幕，在 Chrome 侧栏生成参考答案与解析。",
+  "minimum_chrome_version": "116",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage",
+    "sidePanel",
+    "tabs"
+  ],
+  "optional_host_permissions": [
+    "https://*/*",
+    "http://*/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "打开题见 PageWise"
+  },
+  "side_panel": {
+    "default_path": "panel.html"
+  }
+}
